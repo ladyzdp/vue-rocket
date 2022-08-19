@@ -12,6 +12,16 @@ let routes = [
 
     component: () =>
         import("@pages/index/index.vue"),
+},
+{
+    path: "/lifecycle",
+    name: "lifecycle",
+    meta: {
+        title: "lifecycle",
+    },
+
+    component: () =>
+        import("@components/Lifecycle.vue"),
 }
 
 ];
