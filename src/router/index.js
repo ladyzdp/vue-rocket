@@ -1,46 +1,24 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-Vue.use(Router)
-let routes = [
-
-{
-    path: "/",
-    name: "index",
-    meta: {
-        title: "Vue",
-    },
-
-    component: () =>
-        import("@pages/index/index.vue"),
-},
-{
-    path: "/lifecycle",
-    name: "lifecycle",
-    meta: {
-        title: "lifecycle",
-    },
-
-    component: () =>
-        import("@components/Lifecycle.vue"),
-}
-
-];
+import Vue from 'vue';
+import Router from 'vue-router';
+Vue.use(Router);
+import routers from './routers';
 
 let router = new Router({
+    // mode: 'hash',
     mode: 'history',
     base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
-    routes: routes,
- 
+    routes: routers,
+
 });
 
-// router.beforeEach((to, from, next) => {
+router.beforeEach((to, from, next) => {
 
-//     const title = to.meta && to.meta.title;
-//     if (title) {
-//         document.title = title;
-//     }
-//     next()
-// });
+    const title = to.meta && to.meta.title;
+    if (title) {
+        document.title = title;
+    }
+    next();
+});
 
 export default router;

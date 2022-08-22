@@ -1,24 +1,24 @@
 # vue-rocket
 
-## Project setup
+## 安装依赖
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 启动项目
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 工程构建
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### 代码格式检查
 ```
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 功能清单
+![Vue.js常用内置API](./public/vue.jpg).
