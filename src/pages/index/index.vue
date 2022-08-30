@@ -1,6 +1,5 @@
 <template>
     <div>
-    <h2>示例列表</h2>
         <ul>
             <li v-for="(item,index) in list" :key="index">
                 <router-link :to="item.path">
@@ -30,6 +29,9 @@ export default {
         },{
             name:'逻辑复用',
             path:'/logicReuse'
+        },{
+            name:'路由演示',
+            path:'/router'
         }]
     }}
 }

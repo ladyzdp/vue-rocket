@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2>组件通信</h2>
-
     <ul>
       <li v-for="(item, index) in list" :key="index">
         <a href="javascript:;" @click="toggleCompt(item)">

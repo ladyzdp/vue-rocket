@@ -4,8 +4,8 @@ Vue.use(Router);
 import routers from './routers';
 
 let router = new Router({
-    // mode: 'hash',
     mode: 'history',
+    linkActiveClass:'secondary',
     base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
     routes: routers,
@@ -13,7 +13,6 @@ let router = new Router({
 });
 
 router.beforeEach((to, from, next) => {
-
     const title = to.meta && to.meta.title;
     if (title) {
         document.title = title;

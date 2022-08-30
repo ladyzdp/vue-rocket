@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>逻辑复用</h2>
     <h6>filter过滤器演示</h6>
     <ul>
       <li>金额：{{ momount | NumberFormat }}</li>
