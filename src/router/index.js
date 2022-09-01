@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 Vue.use(Router);
 import routers from './routers';
+// import routersStatic from './routersStatic';
 
 let router = new Router({
     mode: 'history',
@@ -9,6 +10,7 @@ let router = new Router({
     base: process.env.BASE_URL,
     scrollBehavior: () => ({ y: 0 }),
     routes: routers,
+    // routes: routersStatic,
 
 });
 

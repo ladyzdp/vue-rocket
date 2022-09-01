@@ -1,3 +1,13 @@
+import Index from '@pages/index/index.vue'
+import Lifecycle from '@components/Lifecycle.vue'
+import ComponentComm from '@pages/data/index.vue'
+import Components from '@pages/builtInComponents/index.vue'
+import Directives from '@components/Directives.vue'
+import LogicReuse from '@components/LogicReuse.vue'
+import Detail from '@components/Detail.vue'
+import RouterCompt from '@components/RouterCompt.vue'
+import KeepAlive from '@components/KeepAlive.vue'
+
 export default [
   {
     path: '/',
@@ -9,7 +19,7 @@ export default [
     meta: {
       title: '示例列表',
     },
-    component: () => import('@pages/index/index.vue'),
+    component: Index,
   },
   {
     path: '/lifecycle',
@@ -18,7 +28,7 @@ export default [
       title: '生命周期',
       keepAlive: true,
     },
-    component: () => import('@components/Lifecycle.vue'),
+    component: Lifecycle,
   },
   {
     path: '/componentComm',
@@ -26,7 +36,7 @@ export default [
     meta: {
       title: '组件通信',
     },
-    component: () => import('@pages/data/index.vue'),
+    component: ComponentComm,
   },
   {
     path: '/components',
@@ -35,7 +45,7 @@ export default [
       title: '内置组件',
       keepAlive: true,
     },
-    component: () => import('@pages/builtInComponents/index.vue'),
+    component: Components,
   },
   {
     path: '/directives',
@@ -44,7 +54,7 @@ export default [
       title: '常用指令',
       keepAlive: false,
     },
-    component: () => import('@components/Directives.vue'),
+    component: Directives,
   },
   {
     path: '/logicReuse',
@@ -53,7 +63,7 @@ export default [
       title: '逻辑复用',
       keepAlive: false,
     },
-    component: () => import('@components/LogicReuse.vue'),
+    component: LogicReuse,
   },
   {
     path: '/detail',
@@ -61,20 +71,20 @@ export default [
     meta: {
       title: '详情组件',
     },
-    component: () => import('@components/Detail.vue'),
+    component: Detail,
   },
   {
     path: '/router',
-    component: () => import('@components/RouterCompt.vue'),
-    // redirect:'/router/keepAlive',
+    component: RouterCompt,
+    redirect:'/router/keepAlive',
     children: [
       {
-        path: '/router/detail/:type',
+        path: '/router/detail/:id',
         name: 'RouterDetail',
         meta: {
           title: '详情组件',
         },
-        component: () => import('@components/Detail.vue'),
+        component: Detail,
       },
       {
         path: '/router/keepAlive',
@@ -82,7 +92,7 @@ export default [
         meta: {
           title: 'KeepAlive演示组件',
         },
-        component: () => import('@components/KeepAlive.vue'),
+        component: KeepAlive,
       },
     ],
     meta: {

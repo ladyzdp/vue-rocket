@@ -2,7 +2,7 @@ const path = require("path");
 const CompressionWebpackPlugin = require("compression-webpack-plugin"); //Gzip
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin"); // 代码压缩
 const isProduction = process.env.NODE_ENV !== "development";
-const outputDir = "dist";
+const outputDir = "rocket";
 
 function resolve(dir) {
     return path.join(__dirname, dir);
