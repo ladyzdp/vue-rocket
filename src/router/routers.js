@@ -12,6 +12,10 @@ export default [
     component: () => import('@pages/index/index.vue'),
   },
   {
+    path:'/:city([a-zA-z]+)/home',
+    component: () => import('@pages/index/index.vue'),
+  },
+  {
     path: '/lifecycle',
     name: 'lifecycle',
     meta: {
@@ -89,4 +93,8 @@ export default [
       title: '路由演示',
     },
   },
+  {
+    path:'/:city(jiyuan|zhoukou|xinyang)',
+    component: () => import('@pages/index/index.vue'),
+  }
 ]

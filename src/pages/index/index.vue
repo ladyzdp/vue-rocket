@@ -33,6 +33,9 @@ export default {
             name:'路由演示',
             path:'/router'
         }]
-    }}
+    }},
+    created(){
+        console.log("------router------", this.$route);
+    }
 }
 </script>

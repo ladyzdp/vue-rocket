@@ -76,6 +76,7 @@ export default {
     init++;
     this.created = init;
     console.log("------created------", init);
+    console.log("------router------", this.$route);
   },
   beforeMount() {
     init++;
@@ -106,7 +107,7 @@ export default {
   deactivated() {
     init++;
     this.deactivated = init;
-    alert("deactivated：" + init);
+    // alert("deactivated：" + init);
     console.log("------deactivated------", init);
   },
   beforeDestroy() {
@@ -117,7 +118,7 @@ export default {
   },
   destroyed() {
     init++;
-    alert("destroyed：" + init);
+    // alert("destroyed：" + init);
     this.destroyed = init;
     console.log("------destroyed------", init);
   },
